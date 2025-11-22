@@ -1,0 +1,9 @@
+workflow:
+  trigger:
+    url: https://api.github.com/repos/YOUR_PROFILE/ios-signer-ci/actions/workflows/sign.yml/dispatches
+    body: '{"ref":"master"}'
+    headers:
+      Authorization: Token YOUR_TOKEN
+      Content-Type: application/json
+    attempt_http2: true
+  status_url: https://github.com/YOUR_PROFILE/ios-signer-ci/actions/workflows/sign.yml
